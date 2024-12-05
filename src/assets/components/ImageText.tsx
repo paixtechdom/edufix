@@ -3,7 +3,7 @@
 // import 'react-lazy-load-image-component/src/effects/blur.css'
 // import 'react-lazy-load-image-component/src/effects/opacity.css'
 import { FC} from 'react'
-import { Button } from './Button'
+
 
 export const ImageText:FC<any> = ({id, title, desc, img,  btn}) => {
     return(

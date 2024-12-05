@@ -1,16 +1,16 @@
 import { FC, useEffect } from "react"
 import { ScrolltoTop } from "../../App"
-import { Dogs } from "../../assets/Constants"
 import { Button } from "../../assets/components/Button"
-
 
 
 
 const ContactPage = () => {
 
+
     useEffect(() => {
         ScrolltoTop()
     }, [])
+    
 
     return(
         <main className="center flex-col w-full pt-[20vh] pb-[10vh] bg-white bg-bg text-base">
@@ -35,22 +35,16 @@ const ContactPage = () => {
                     />
 
                     <FormInput 
-                        name={"Location"}
+                        name={"location"}
                         label={"Location"}
                     />
-                   
-                    <div className="flex flex-col w-full">
-                        <label htmlFor="dog" className="px-2">Select Dog</label>
 
-                        <select name="dog" id="" className="bg-zinc-300 h-12 rounded px-3 outline-none">
-                            <option value={undefined}>--Select</option>
-                            {
-                                Dogs.map((dog, i) => (
-                                    <option key={i} value={dog.name}>{dog.name}</option>
-                                ))
-                            }
-                        </select>
-                    </div>
+                    <FormInput 
+                        name={"message"}
+                        label={"Message"}
+                    />
+                   
+                  
 
                     <Button 
                         text={"Submit"}

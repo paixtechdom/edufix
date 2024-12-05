@@ -7,7 +7,7 @@ import { logo_transparent } from './assets/Constants';
 import AboutPage from './pages/about/page';
 
 const Navbar = lazy(() => import('./assets/components/Navbar'))
-const Footer = lazy(() => import('./assets/components/Footer'))
+// const Footer = lazy(() => import('./assets/components/Footer'))
 const HomePage = lazy(() => import("./pages/home/page"))
 const ContactPage = lazy(() => import("./pages/contact/page"))
 

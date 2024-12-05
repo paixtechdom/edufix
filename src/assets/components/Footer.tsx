@@ -1,25 +1,24 @@
-import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneOutboundFill } from "react-icons/bs"
-import { ContactInfoInterface } from "../Interfaces"
+// import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneOutboundFill } from "react-icons/bs"
 
 
 
-export const ContactInfo = [
-    {
-        icon: <BsTelephoneOutboundFill />,
-        contact: '+234 803 401 8954',
-        link: "tel:+2348034018954"
-    },
-    {
-        icon: <BsEnvelopeFill />,
-        contact: 'donatexdiagnostics@gmail.com',
-        link: "mailto:donatexdiagnostics@gmail.com"
-    },
-    {
-        icon: <BsGeoAltFill />,
-        contact: 'RW8G+Q4C, Apebi Street, Ijebu Ode 120101, Ogun State',
-        link: "#"
-    },
-]
+// export const ContactInfo = [
+//     {
+//         icon: <BsTelephoneOutboundFill />,
+//         contact: '+234 803 401 8954',
+//         link: "tel:+2348034018954"
+//     },
+//     {
+//         icon: <BsEnvelopeFill />,
+//         contact: 'donatexdiagnostics@gmail.com',
+//         link: "mailto:donatexdiagnostics@gmail.com"
+//     },
+//     {
+//         icon: <BsGeoAltFill />,
+//         contact: 'RW8G+Q4C, Apebi Street, Ijebu Ode 120101, Ogun State',
+//         link: "#"
+//     },
+// ]
 
 
 

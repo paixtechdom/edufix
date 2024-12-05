@@ -8,7 +8,7 @@ const Navbar = () => {
     const [ showNav, setShowNav ] = useState(false)
     const [ currentNav, setCurrentNav ] = useState(0)
     const [ currentDropDown, setCurrentDropDown ] = useState("")
-    const [ currentDropDownIndex, setCurrentDropDownIndex ] = useState(0)
+    const currentDropDownIndex = 0
 
 
     return(
