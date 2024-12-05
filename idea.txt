@@ -1,0 +1,33 @@
+data type for e in input handling :  ChangeEvent<HTMLInputElement>
+
+ const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log('Button clicked:', event);
+  };
+
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Form submitted with name:', name);
+  };
+
+
+
+React.FC meaning
+
+interface props {
+    name: string,
+    id: number
+}
+
+
+const TypesProps: React.FC<props> = ({ name, id }) => {
+    
+    return (
+      <div>
+        <p>Name: {name}</p>
+        <p>ID: {id}</p>
+      </div>
+    );
+  };
+
+

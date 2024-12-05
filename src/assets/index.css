@@ -1,0 +1,19 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: monospace;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
