@@ -73,7 +73,7 @@ const CreateHivePage = () => {
 
                 <div className="flex flex-col gap-2">
                   {course.applications.map((application, i) => (
-                    <li>{application}</li>
+                    <li key={i}>{application}</li>
                   ))}
                 </div>
                 <Button 
