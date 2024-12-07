@@ -91,7 +91,7 @@ const AboutPage = () => {
             </div>
     
             <ImageText
-              title="OUR GOAL AT EDUFIX" 
+              title="OUR GOAL AT EDUCFIX" 
               desc={[About.goal]}
               img={logo_transparentII}
               btn={
@@ -125,13 +125,6 @@ const AboutPage = () => {
             
             {/* vision */}
 
-{/* 
-              goal
-  
-              courses
-  
-              createhive */}
-  
           
           </section>
 

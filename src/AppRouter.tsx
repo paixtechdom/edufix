@@ -5,9 +5,10 @@ import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
 import { logo_transparent } from './assets/Constants';
 import AboutPage from './pages/about/page';
+import CreateHivePage from './pages/skill/createhive/page';
 
 const Navbar = lazy(() => import('./assets/components/Navbar'))
-// const Footer = lazy(() => import('./assets/components/Footer'))
+const Footer = lazy(() => import('./assets/components/Footer'))
 const HomePage = lazy(() => import("./pages/home/page"))
 const ContactPage = lazy(() => import("./pages/contact/page"))
 
@@ -21,11 +22,12 @@ export const AppRouter = () => {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
+                        <Route path="/programs/createhive" element={<CreateHivePage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/about" element={<AboutPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
                     </Routes>
-                    {/* <Footer /> */}
+                    <Footer />
                 </Suspense>
             </Router>
         </HelmetProvider>

@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 *{
-    font-family: 'Helvetica Now MT Disp', sans-serif;
+    font-family: 'Helvetica Now MT Text', sans-serif;
 }
 
 .center{

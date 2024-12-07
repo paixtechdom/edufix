@@ -39,7 +39,7 @@ export const Branches = [
                 icon: <FaDollarSign />
             },
             {
-                title: "Trainings (Seminars and Webinars)",
+                title: "Trainings",
                 desc: ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt praesentium fugiat hic, ullam omnis eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, harum."],
                 icon: <BiBook />
             }
@@ -58,6 +58,7 @@ const HomePage = () => {
     useEffect(() => {
         ScrolltoTop()
     }, [])
+
     return(
         <main className="center flex-col bg-bg w-full mt -32 text-base">
 
@@ -65,15 +66,15 @@ const HomePage = () => {
             
             <AfterHero />
 
-            <div className="w-11/12 lg:w-10/12 center flex-col gap-3">
-                <h2 className="text-4xl font-bold text-center">INNOVATION FORGE PROGRAMS</h2>
+            <div className="w-11/12 lg:w-10/12 center flex-col gap-3 mt-[15vh]">
+                <h2 className="text-4xl font-bold text-center">THE INNOVATION FORGE PROGRAMS</h2>
                 <p className="w-11/12 lg:w-8/12 text-center">We aim to become a premier educational organization known for excellence in teaching, learning, and research. 
                 </p>
 
-                <div className="flex flex-col lg:grid lg:grid-cols-2 justify-between mt-5 gap-10">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 justify-between mt-5 gap-16">
                     {Branches[1]?.sub?.map((j, i) => (
-                        <div key={i} className="flex p-7 rounded-xl flex-col w-full bg-primary bg-opacity-10 gap-3 borde r border-sec shadow-xl">
-                            <p className="text-4xl text-sec">
+                        <div key={i} className="flex p-7 rounded-xl flex-col w-full bg-primary bg-opacity-5 gap-3 borde r border-sec shadow-xl">
+                            <p className="text-6xl text-sec">
                                 {j.icon}
                             </p>
                             <h3 className="font-bold text-xl uppercase">{j.title}</h3>
@@ -96,7 +97,7 @@ const HomePage = () => {
 
             <section className="w-full center py-[15vh] my-[15vh] overflow-hidden relative bg-bg text-base bg-primary bg-opacity-5">
                 <div className="w-11/12 lg:w-10/12 center flex-col gap-10">
-                    <h2 className="text-4xl font-bold ">WHY EDUFIX</h2>
+                    <h2 className="text-4xl font-bold ">WHY EDUCFIX</h2>
                     <div className="w-full flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-between gap-10">
 
                         {

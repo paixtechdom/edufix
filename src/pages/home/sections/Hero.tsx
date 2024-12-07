@@ -6,7 +6,7 @@ import { logo_transparentII } from "../../../assets/Constants"
 
 export const Hero = () => {
     return(
-        <section className="min-h-[] h-fit w-full center"> 
+        <section className="min-h-screen h-fit w-full center"> 
             <div className="mt-20 lg:mt-0 w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-between gap-20">
                 <div className="flex flex-col gap-4 w-full lg:w-7/12">
                     <h1 className="text-6xl font-bold ">

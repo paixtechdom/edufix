@@ -55,7 +55,7 @@ export const Content = [
 export const AfterHero : React.FC =  () => {
     return(
         <>
-            <section className="w-full center py-[20vh] overflow-hidden relative bg-bg text-base">
+            <section className="w-full center py-[15vh] overflow-hidden relative text-base">
                 <div className="w-11/12 lg:w-10/12 center flex-col gap-10">
                     <div className="w-full flex flex-col lg:flex-row justify-between gap-10">
 
