@@ -20,18 +20,18 @@ export const Content = [
         title: "Benin Accredited",
         icon: <GoVerified />,
         type: "after",
-        desc: "Edufix is recognised by the BAU as an accredited online university."
+        desc: "Educfix is recognised by the BAU as an accredited online university."
     },
     {
         title: "Flexible",
         icon: <TiTime />,
         type: "",
-        desc: "Since Edufix is 100% free, you can study to fit your schedule anytime, anywhere."
+        desc: "Since Educfix is 100% free, you can study to fit your schedule anytime, anywhere."
     },
     {
         title: "Quality",
         icon: <FaStar />,
-        desc: "Edufix is an Acrcredited, Benin Online University. Our academic leadership includes scholars from top universities around the world."
+        desc: "Educfix is an Acrcredited, Benin Online University. Our academic leadership includes scholars from top universities around the world."
     },
     {
         title: "Support",
