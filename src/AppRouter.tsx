@@ -6,6 +6,9 @@ import { PageNotFound } from './pages/PageNotFound';
 import { logo_transparent } from './assets/Constants';
 import AboutPage from './pages/about/page';
 import CreateHivePage from './pages/skill/createhive/page';
+import MycelialPage from './pages/skill/mycelial/page';
+import MillionairePage from './pages/skill/millionaire/page';
+import BecomePage from './pages/become/page';
 
 const Navbar = lazy(() => import('./assets/components/Navbar'))
 const Footer = lazy(() => import('./assets/components/Footer'))
@@ -23,6 +26,9 @@ export const AppRouter = () => {
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
                         <Route path="/programs/createhive" element={<CreateHivePage />}/>
+                        <Route path="/programs/mycelial-network" element={<MycelialPage />}/>
+                        <Route path="/programs/millionaire-mind" element={<MillionairePage />}/>
+                        <Route path="/become-a-createhive" element={<BecomePage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/about" element={<AboutPage />}/>
                         <Route path="/*" element={<PageNotFound />} />

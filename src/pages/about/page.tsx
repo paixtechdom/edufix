@@ -8,7 +8,12 @@ import { ImageText } from "../../assets/components/ImageText"
 import { InfoPoster } from "../../assets/components/InfoPoster"
 
 export const About = {
-  about: "EDUCFIX is an educational organization poised to build ethical, innovative, and creative leaders who are solution providers in the areas of science, arts, business, and related areas through excellence in research and learning.",
+  about: [
+    <p >EDUCFIX, an educational organization committed to fostering ethical, innovative, and creative leadership, traces its origins back to December 2021, when the foundational concept for its flagship program, Innovation Forge, was conceived. While Innovation Forge represents EDUCFIX's public launch, the organization's journey began with a period of intensive development and exploration.</p>,
+    'In 2022, EDUCFIX launched "Amethyst Tutorials," an online learning initiative that served as a valuable testing ground for pedagogical approaches and content development. While Amethyst Tutorials eventually concluded, the core vision of EDUCFIX remained steadfast.',
+    "Building upon the lessons learned, EDUCFIX continued its development, refining its approach and curriculum before settling on its current structure, with Innovation Forge as its inaugural program, and further branches poised to launch soon.",
+    "EDUCFIX's overarching mission is to advance learning through rigorous research and the cultivation of future leaders across science, arts, business, and related fields. The organization's ambitious goal is to build, train, and certify over 10 million leaders in diverse areas of life."
+  ],
   vision: "To become a premier educational organization known for excellence in teaching, learning, and research.",
   missison: "To advance knowledge through research and building of future leaders.",
   values: [
@@ -38,23 +43,25 @@ export const About = {
 
 const AboutPage = () => {
   return (
-    <main className="w-full center flex-col mt-3">
+    <main className="w-full center flex-col mt-32">
 
-        <section className="min-h-[90vh] w-full center mt-20 lg:mt-0"> 
-            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row gap-20 items-center justify-between">
-                <div className="flex flex-col gap-4 w-full lg:w-7/12">
-                    <h1 className="text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent">
+        <section className="w-full center mt-20 lg:mt-0"> 
+            <div className="w-11/12 lg:w-10/12 flex flex-col gap-8 justify-between">
+                    <h1 className="text-4xl font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent w-fit">
                         ABOUT US
                     </h1>
-                    <p className="text-base">
-                      {About.about}
-                    </p>
-                    
-                </div>
 
-                <div className="center lg:w-4/12">
-                    <img src={logo_transparentII} alt="Logo" className="w-full h-full object-cover"/>
-                </div>
+                    <div className="flex flex-col gap-4">
+                      {About.about.map((a, i) => (
+                        <p key={i} className="">
+                          {a}
+                        </p>
+                      ))}
+                    </div>
+                    
+      
+
+              
 
             </div>        
         </section>

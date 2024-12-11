@@ -2,10 +2,11 @@ import { useState } from "react"
 import { CoursesList } from "../../../assets/Constants"
 import { BiCheck, BiCheckCircle, BiChevronDown } from "react-icons/bi"
 import { Button } from "../../../assets/components/Button"
+import { BsStarFill } from "react-icons/bs"
 
 export const CreateHiveInfo = {
   desc: [
-    <p><strong>CREATEHIVE:</strong> formed from the combination of two words <strong>“Creativity”</strong> and <strong>“Hive Mind”.</strong>  A hive mind typically refers to a collective consciousness or intelligence formed through the interconnectedness of individuals within a group. Examples include social insects like bees and ants, where individual actions contribute to the overall success of the colony.</p>,
+  <p>Developed by EDUCFIX, Createhive is formed from the combination of two words <strong>“Creativity”</strong> and <strong>“Hive Mind”.</strong>  A hive mind typically refers to a collective consciousness or intelligence formed through the interconnectedness of individuals within a group. Examples include social insects like bees and ants, where individual actions contribute to the overall success of the colony.</p>,
   "Creativity, on the other hand, is often associated with individual expression, imagination, and the generation of novel ideas.",
     "CreateHive means the generation of novel ideas backed up with collective intelligence formed through the interconnectedness of individuals within a group."
   ],
@@ -62,6 +63,8 @@ const CreateHivePage = () => {
   return (
     <main className="text-base w-full pt-32 center bg-primary bg-opacity-5 pb-32">
       <div className="w-11/12 lg:w-9/12  flex flex-col">
+
+
       <div className="flex flex-col gap-3">
         <h1 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-4xl w-fit">CREATEHIVE</h1>
         <div className="flex flex-col gap-2">
@@ -79,13 +82,17 @@ const CreateHivePage = () => {
         <div className="flex flex-col gap-2">
           {
             CreateHiveInfo.aims.map((aim, i) => (
-              <li key={i}>{aim}</li>
+              <div key={i} className="flex gap-2">
+                <BsStarFill  className="text-sec text-lg mt-1"/>
+                <p>
+                  {aim}
+                </p>
+              </div>
             ))
           }
         </div>
         
       </div>
-
 
 
       <div className="flex flex-col">
@@ -95,8 +102,8 @@ const CreateHivePage = () => {
 
         <div className="flex flex-col gap-2 mt-4">
           {CreateHiveInfo.how.map((h, i) => (
-            <>
-            <p key={i}>
+            <div key={i} className="flex flex-col gap-2" >
+            <p>
               <b className="mr-1">{i+1}.</b> {h.info}
             </p>
 
@@ -113,7 +120,7 @@ const CreateHivePage = () => {
                   ))
                 }
               </div> : "" }
-            </>
+            </div>
 
           ))}
         </div>
@@ -131,8 +138,6 @@ const CreateHivePage = () => {
 
 
 
-      
-
       <div id="courses" className="flex flex-col">
         
         <h2 className="uppercase text-3xl font-bold mb-5 bg-clip-text bg-gradient-to-r from-primary to-sec  text-transparent w-fit mt-20">LIST OF COURSES</h2>
@@ -142,13 +147,16 @@ const CreateHivePage = () => {
 
         {CoursesList.map((course, i) => (
           <div id={`${course.title.replace(" ",'').replace(" ",'').replace(" ",'').replace(" ",'').replace("&",'')}`}
-            key={i} className={`flex flex-col gap-3 cursor-pointer bg-white p-9 rounded-xl shadow-lg transition-all duration-500 ${currentCourse == i ? "my-10" : "my-5"} `} onClick={() => {
+            key={i} className={`transition-all duration-500 ${currentCourse == i ? "py-10" : "py-5"} `} onClick={() => {
               setCurrentCourse(i)
+              document.querySelector(`#${course.title.replace(" ",'').replace(" ",'').replace(" ",'').replace(" ",'').replace("&",'')}`)?.scrollIntoView({
+                behavior: "smooth"
+              })
             }}>
-              <div className="flex justify-between cursor-pointer">
+              <div className="flex justify-between cursor-pointer bg-white p-9 rounded-xl shadow-lg ">
 
                 <div className="flex flex-col gap-3">
-                  <div className="flex items-center gap-2 flex-wrap">
+                  <div className="flex flex-col md:flex-row lg:items-center gap-2">
                     <BiCheckCircle className="text-3xl text-sec"/>
                     <h3 className="uppercase text-primary text-xl font-bold">{course.title}</h3>
                   </div>
@@ -165,7 +173,10 @@ const CreateHivePage = () => {
 
                       <div className="flex flex-col gap-2">
                         {course.applications.map((application, i) => (
-                          <li key={i}>{application}</li>
+                          <div key={i} className="flex gap-2">
+                            <BsStarFill  className="text-sec text-lg mt-1"/>
+                            <p>{application}</p>
+                          </div>
                         ))}
                       </div>
                       <Button 
@@ -179,7 +190,7 @@ const CreateHivePage = () => {
                 
                 {
                   currentCourse !== i &&
-                  <div className="cursor-pointer rounded-lg center bg-primary text-white h-fit" onClick={() => {
+                  <div className="hidden cursor-pointer rounded-lg lg:center bg-primary text-white h-fit" onClick={() => {
                     setCurrentCourse(i)
                   }}>
                     <BiChevronDown  className="text-6xl cursor-pointer bg-re d-400 z-10"/>

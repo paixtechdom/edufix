@@ -25,16 +25,16 @@ export const Navigation = [
           },
           {
               title: 'Mycelial Network',
-              link: ''
+              link: 'mycelial-network'
           },
           {
               title: 'Millioniare Mind',
-              link: ''
+              link: 'millionaire-mind'
           },
-          {
-              title: 'Trainings',
-              link: ''
-          },
+        //   {
+        //       title: 'Trainings',
+        //       link: ''
+        //   },
       ]
   },
   {
@@ -165,25 +165,54 @@ export const CoursesList = [
 
 export const Questions = [
     {   
-        title: 'Lorem ipsum dolor sit amet, consectetur?',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora alias repellat laboriosam dolor officiis, vel aliquam sequi consequatur, officia incidunt doloremque! Ea iusto est culpa velit, repudiandae recusandae veritatis?'
+        title: 'What is Innovation Forge?',
+        desc: 'Innovation Forge is a comprehensive online education platform offering programs in online skill development, online business education, and advanced business training, designed to empower individuals and businesses to thrive in the digital age. We equip you with the knowledge and skills needed to launch or scale your business and build a successful career.'
     },
-    {
-        title: 'Lorem ipsum dolor sit amet, consectetur?',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora alias repellat laboriosam dolor officiis, vel aliquam sequi consequatur, officia incidunt doloremque! Ea iusto est culpa velit, repudiandae recusandae veritatis?'
+    {   
+        title: 'What types of programs do you offer?',
+        desc: 'We offer four main program categories: Online Skill Education called CREATEHIVE (covering specific in-demand skills), Online Business Education called MYCELIAL NETWORK (covering foundational business principles), and Online Advanced Business Education named MILLIONAIRE MIND & Trainings (offering specialized training for experienced entrepreneurs and business professionals). Specific course details are available on our website.'
     },
-    {
-        title: 'Lorem ipsum dolor sit amet, consectetur?',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora alias repellat laboriosam dolor officiis, vel aliquam sequi consequatur, officia incidunt doloremque! Ea iusto est culpa velit, repudiandae recusandae veritatis?'
+    {   
+        title: 'What is the difference between your Online Business Education and Advanced Business Education programs?',
+        desc: 'Online Business Education provides foundational knowledge for aspiring entrepreneurs or those starting a business. Advanced Business Education is geared towards individuals with existing businesses who seek to scale, optimize, or specialize their operations. These programs delve deeper into complex business strategies and advanced techniques.'
     },
-    {
-        title: 'Lorem ipsum dolor sit amet, consectetur?',
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora alias repellat laboriosam dolor officiis, vel aliquam sequi consequatur, officia incidunt doloremque! Ea iusto est culpa velit, repudiandae recusandae veritatis?"
+    {   
+        title: 'How long are the programs?',
+        desc: 'Program durations vary depending on the specific course. Details regarding the length of each program are listed on the course pages. Some are self-paced, while others follow a structured schedule.'
     },
-    {
-        title: 'Lorem ipsum dolor sit amet, consectetur?',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora alias repellat laboriosam dolor officiis, vel aliquam sequi consequatur, officia incidunt doloremque! Ea iusto est culpa velit, repudiandae recusandae veritatis?'
+    {   
+        title: 'What kind of support is provided?',
+        desc: 'We offer various support options, depending on the program. This may include access to instructors via email or online forums, live Q&A sessions, downloadable resources, and potentially mentorship opportunities.'
     },
+    {   
+        title: 'What format are the courses in?',
+        desc: 'Our courses utilize a mix of learning methods, including video lectures, interactive exercises, downloadable resources, quizzes, assignments, and community forums.'
+    },
+    {   
+        title: 'What software or tools do I need?',
+        desc: "The specific software and tools required will vary depending on the course. This information is clearly stated on each program's page. Generally, a reliable internet connection, a phone or tablet, or a computer are the only essentials."
+    },
+    {   
+        title: 'Will I receive a certificate upon completion?',
+        desc: 'Yes, upon successful completion of a program, you will receive a certificate of completion from Innovation Forge.'
+    },
+    {   
+        title: 'How much do your programs cost?',
+        desc: 'Detailed pricing information is available on the programs page. We may also offer payment plans or discounts.'
+    },
+    {   
+        title: 'What is your refund policy?',
+        desc: 'No refunds will be issued after the course materials have been accessed or after the start date of the course. All courses informations are available at the course page.'
+    },
+    {   
+        title: 'How do I enroll in a program?',
+        desc: 'Enrollment is easy! Simply visit our website, select the program you are interested in, and follow the online registration process. You will need to create an account and provide basic information.'
+    },
+    {   
+        title: 'How can I contact you if I have more questions?',
+        desc: 'You can reach us via email at talktoeducfix@gmail.com, phone at +2349066476770, +2348105967311, +22940052711, or through the contact form on our website.'
+    },
+  
  ]
 
 
