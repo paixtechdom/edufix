@@ -6,6 +6,7 @@ import { FaHandshake } from "react-icons/fa"
 import { FiTarget } from "react-icons/fi"
 import { ImageText } from "../../assets/components/ImageText"
 import { InfoPoster } from "../../assets/components/InfoPoster"
+import { Header } from "../../assets/components/Header"
 
 export const About = {
   about: [
@@ -69,9 +70,11 @@ const AboutPage = () => {
         <section className="w-11/12 lg:w-10/12 flex flex-col gap-40 mt-32 lg:mt-24">
 
             <div className="center w-full flex-col gap-12">
-              <h2 className="font-bold text-4xl w-full lg:w-fit">
-                OUR VALUES
-              </h2>
+              <Header 
+                text={
+                  <h2 className="font-bold text-4xl w-full lg:w-fit">OUR VALUES</h2>
+                }
+              />
               <div className="grid grid-cols-2 gap-9 lg:flex justify-between lg:gap-3 flex-wrap w-full">
                 {
                   About.values.map((j, i) => (
@@ -92,7 +95,7 @@ const AboutPage = () => {
             <div className="bg-primary center min-h-[30vh] rounded-3xl py-9 relative overflow-hidden">
               <DesignLines />
               <div className="z-10 text-center center flex-col gap-4 w-11/12">
-                <h3 className="font-bold text-3xl text-zinc-300">OUR MISSION</h3>
+                <h3 className="font-bold text-3xl text-zinc-100">OUR MISSION</h3>
                 <p className="text-white">{About.missison}</p>
               </div>
             </div>

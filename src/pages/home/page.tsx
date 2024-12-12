@@ -10,6 +10,7 @@ import { BsPeople } from "react-icons/bs"
 import { FaDollarSign } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import { FAQ } from "./sections/FAQ"
+import { Header } from "../../assets/components/Header"
 
 export const Branches = [
     {
@@ -66,10 +67,23 @@ const HomePage = () => {
             
             <AfterHero />
 
-            <div className="w-11/12 lg:w-10/12 center flex-col gap-3 mt-[15vh]">
-                <h2 className="text-4xl font-bold text-center">THE INNOVATION FORGE PROGRAMS</h2>
-                <p className="w-11/12 lg:w-8/12 text-center">We aim to become a premier educational organization known for excellence in teaching, learning, and research. 
-                </p>
+            <div className="w-11/12 lg:w-10/12 flex flex-col gap-3 mt-[15vh]">
+                <Header 
+                    text={
+                        <h2 className="text-4xl">THE INNOVATION FORGE PROGRAMS</h2>
+                    }
+                />
+                <div className="flex flex-col">
+                    <p>
+                        Innovation Forge builds upon EDUCFIX's legacy by delivering focused, high-impact online training programs in business, advanced business strategies, and in-demand skills, equipping our students with the expertise needed to succeed.
+                    </p>
+                    <p className="mb-3 mt-1">
+                        Our programs are designed to be practical, engaging, and effective, fostering a community of learners who are ready to make their mark in the world.
+                    </p>
+                    <p>
+                        Innovation Forge benefits from EDUCFIX's extensive network of expert instructors and state-of-the-art learning management system, providing students with a superior learning experience.
+                    </p>
+                </div>
 
                 <div className="flex flex-col lg:grid lg:grid-cols-2 justify-between mt-5 gap-16">
                     {Branches[1]?.sub?.map((j, i) => (
@@ -88,7 +102,7 @@ const HomePage = () => {
                             </div>
                             <Button 
                                 text={"learn more"}
-                                className="bg-primary rounded-full text-white min-w-[200px] w-fit"
+                                className="border border-sec rounded-full min-w-[180px] w-fit h-10 mt-3 text-sm transition-all duration-1000 hover:bg-primary hover:text-white active:bg-primary active:text-white hover:border-none"
                             />
                         </div>
                     ))}
@@ -97,7 +111,11 @@ const HomePage = () => {
 
             <section className="w-full center py-[15vh] my-[15vh] overflow-hidden relative bg-bg text-base bg-primary bg-opacity-5">
                 <div className="w-11/12 lg:w-10/12 center flex-col gap-10">
-                    <h2 className="text-4xl font-bold ">WHY EDUCFIX</h2>
+                    <Header 
+                        text={
+                            <h2 className="text-4xl">WHY EDUCFIX</h2>
+                        }
+                    />
                     <div className="w-full flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-between gap-10">
 
                         {

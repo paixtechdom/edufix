@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit"
 import navigationReducer from "./navigation/navigationSlice"
+import alertReducer from "./AlertSlice"
 
 
 export const store = configureStore({
     reducer: {
-        navigation: navigationReducer
+        navigation: navigationReducer,
+        alert: alertReducer
     }
 })
 

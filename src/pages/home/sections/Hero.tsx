@@ -9,8 +9,8 @@ export const Hero = () => {
         <section className="min-h-screen h-fit w-full center"> 
             <div className="mt-20 lg:mt-0 w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-between gap-20">
                 <div className="flex flex-col gap-4 w-full lg:w-7/12">
-                    <h1 className="text-5xl font-bold ">
-                        <span className="text-4xl bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
+                        <span className="text-2xl md:text-3xl lg:text-4xl bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent">
                         EDUCFIX Presents:
                         </span>
                          <br /> 

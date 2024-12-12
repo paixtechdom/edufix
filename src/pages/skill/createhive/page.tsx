@@ -3,6 +3,8 @@ import { CoursesList } from "../../../assets/Constants"
 import { BiCheck, BiCheckCircle, BiChevronDown } from "react-icons/bi"
 import { Button } from "../../../assets/components/Button"
 import { BsStarFill } from "react-icons/bs"
+import { Header } from "../../../assets/components/Header"
+import { InfoPoster } from "../../../assets/components/InfoPoster"
 
 export const CreateHiveInfo = {
   desc: [
@@ -61,7 +63,7 @@ const CreateHivePage = () => {
   const [ currentCourse, setCurrentCourse ] = useState(0)
 
   return (
-    <main className="text-base w-full pt-32 center bg-primary bg-opacity-5 pb-32">
+    <main className="text-base w-full pt-32 center flex-col gap-20 bg-primary bg-opacity-5 pb-32">
       <div className="w-11/12 lg:w-9/12  flex flex-col">
 
 
@@ -95,10 +97,14 @@ const CreateHivePage = () => {
       </div>
 
 
-      <div className="flex flex-col">
-        <h2 className="uppercase text-3xl font-bold mb-5 bg-clip-text bg-gradient-to-r from-primary to-sec  text-transparent w-fit mt-20">How will CREATEHIVE work?</h2>
+      <div className="flex flex-col mt-20">
+        <Header 
+          text={
+            <h2 className="text-3xl ">How will CREATEHIVE work?</h2> 
+          }
+        />
 
-        <p>Skills and skills education is usually been treated as unimportant and hereby trained or taught casually. Hence, the reason why a new approach and method will be implored into the skill education. </p>
+        <p className="mt-5">Skills and skills education is usually been treated as unimportant and hereby trained or taught casually. Hence, the reason why a new approach and method will be implored into the skill education. </p>
 
         <div className="flex flex-col gap-2 mt-4">
           {CreateHiveInfo.how.map((h, i) => (
@@ -138,10 +144,14 @@ const CreateHivePage = () => {
 
 
 
-      <div id="courses" className="flex flex-col">
-        
-        <h2 className="uppercase text-3xl font-bold mb-5 bg-clip-text bg-gradient-to-r from-primary to-sec  text-transparent w-fit mt-20">LIST OF COURSES</h2>
-        <p className="">Amidst all the skills available to learn, we will be focusing on the soft skills and streamlining it to a few that we will be providing for the mean time. Here are the skills to train: 
+      <div id="courses" className="flex flex-col mt-20">
+          
+        <Header 
+          text={
+            <h2 className="uppercase text-3xl font-bold bg-clip-text bg-gradient-to-r from-primary to-sec  text-transparent w-fit ">LIST OF COURSES</h2>
+          }
+        />
+        <p className="mt-5">Amidst all the skills available to learn, we will be focusing on the soft skills and streamlining it to a few that we will be providing for the mean time. Here are the skills to train: 
 
         </p>
 
@@ -205,6 +215,10 @@ const CreateHivePage = () => {
 
 
       </div>  
+
+        <InfoPoster 
+          text="BECOME A CREATEHIVE"
+        />
     </main>
   )
 }
