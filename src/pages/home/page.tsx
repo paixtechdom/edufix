@@ -61,7 +61,7 @@ const HomePage = () => {
     }, [])
 
     return(
-        <main className="center flex-col bg-bg w-full mt -32 text-base">
+        <main className="center flex-col w-full text-base">
 
             <Hero />
             

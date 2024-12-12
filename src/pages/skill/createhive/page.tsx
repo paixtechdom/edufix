@@ -2,7 +2,6 @@ import { useState } from "react"
 import { CoursesList } from "../../../assets/Constants"
 import { BiCheck, BiCheckCircle, BiChevronDown } from "react-icons/bi"
 import { Button } from "../../../assets/components/Button"
-import { BsStarFill } from "react-icons/bs"
 import { Header } from "../../../assets/components/Header"
 import { InfoPoster } from "../../../assets/components/InfoPoster"
 
@@ -84,12 +83,9 @@ const CreateHivePage = () => {
         <div className="flex flex-col gap-2">
           {
             CreateHiveInfo.aims.map((aim, i) => (
-              <div key={i} className="flex gap-2">
-                <BsStarFill  className="text-sec text-lg mt-1"/>
-                <p>
-                  {aim}
-                </p>
-              </div>
+              <p  key={i} className='bg-white p-3 w-full rounded-lg'>
+                {aim}
+              </p>
             ))
           }
         </div>
@@ -137,7 +133,7 @@ const CreateHivePage = () => {
           The reason for establishing the skill education like this is to:
           </h3>
           {CreateHiveInfo.reason.map((r, i) => (
-            <p key={i}><b className="mr-1">{i+1}.</b> {r}</p>
+            <p key={i} className='bg-white p-3 w-full rounded-lg'>{r}</p>
           ))}
         </div>
       </div>
@@ -183,10 +179,7 @@ const CreateHivePage = () => {
 
                       <div className="flex flex-col gap-2">
                         {course.applications.map((application, i) => (
-                          <div key={i} className="flex gap-2">
-                            <BsStarFill  className="text-sec text-lg mt-1"/>
-                            <p>{application}</p>
-                          </div>
+                          <p  key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{application}</p>
                         ))}
                       </div>
                       <Button 

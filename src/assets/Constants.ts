@@ -42,10 +42,6 @@ export const Navigation = [
       link: 'become-a-createhive',
   },
   {
-      title: 'Tuition-Free',
-      link: 'Products'
-  },
-  {
       title: 'Contact',
       link: 'Contact'
   }

@@ -7,10 +7,10 @@ const BecomePage = () => {
 
 
   return (
-    <main className='w-full center flex-col mb-32'>
+    <main className='w-full center flex-col pb-[15vh] lg:mt-10'>
       <div className="flex flex-col w-11/12 lg:w-10/12 gap-20">
         <ImageText 
-          title="Become a createhive"
+          title="BECOME A CREATEHIVE"
           desc={[
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti expedita vel, enim quos laborum id molestiae obcaecati similique nostrum ullam neque nemo sed magnam porro laboriosam sunt voluptate provident! Aut!",
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti expedita vel, enim quos laborum id molestiae obcaecati similique nostrum ullam neque nemo sed magnam porro laboriosam sunt voluptate provident! Aut!",
@@ -24,6 +24,7 @@ const BecomePage = () => {
 
           }
         />
+
         <p>About Create hive</p>
         <p>How to be a student</p>
         <p>Fee structure</p>

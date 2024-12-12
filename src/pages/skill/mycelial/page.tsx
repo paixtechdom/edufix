@@ -1,10 +1,8 @@
 import { CgCommunity } from "react-icons/cg"
 import { ImageText } from "../../../assets/components/ImageText"
-import { InfoPoster } from "../../../assets/components/InfoPoster"
 import { logo_transparentII } from "../../../assets/Constants"
 import { FcPodiumWithAudience } from "react-icons/fc"
-import { BsStarFill } from "react-icons/bs"
-import { PiCheckFill } from "react-icons/pi"
+
 
 
 export const mycelial = {
@@ -71,7 +69,7 @@ const MycelialPage = () => {
           </div>
 
 
-          <div className="flex flex-col gap-3 my-12 mt-32">
+          <div className="flex flex-col gap-3 mt-32">
             <h2 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-2xl w-fit uppercase">
               Aims and Objectives of MYCELIAL NETWORK
             </h2>
@@ -80,38 +78,33 @@ const MycelialPage = () => {
             <div className="flex flex-col mt-2 gap-3">
               {
                 mycelial.aims.map((aim, i) => (
-                  <div key={i} className="flex gap-2">
-                    <BsStarFill className="text-sec text-lg mt-1"/>
-                    <p>{aim}</p>
-                  </div>
+                  <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{aim}</p>
+                  
                 ))
               }
             </div>
           </div>
         </div>
 
-        <InfoPoster 
+        {/* <InfoPoster 
           text={<p className="flex flex-col gap-2">
               <span className="text-primary">Niche</span>
 
               {mycelial.niche}
           </p>}
-        />
+        /> */}
        
 
         <div className="w-11/12 lg:w-10/12 flex-col gap-10"
         >
-          <div className="flex flex-col gap-3 my-12 mt-32">
+          <div className="flex flex-col gap-3 mb-12 mt-12">
             <h2 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-2xl w-fit uppercase">
               Eligibility
             </h2>
             <div className="flex flex-col mt-2 gap-3">
               {
                 mycelial.eligibility.map((eligibility, i) => (
-                  <div key={i} className="flex gap-2">
-                    <PiCheckFill className="text-sec text-lg mt-1"/>
-                    <p>{eligibility}</p>
-                  </div>
+                  <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{eligibility}</p>
                 ))
               }
             </div>

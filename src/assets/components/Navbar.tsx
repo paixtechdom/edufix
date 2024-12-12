@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="flex items-center justify-end w-11/12 lg:w-10/12">
 
                 <Link to="/" className="w-full lg:w-3/12 flex justify-start outline-none">
-                    <img src={logo_transparent} alt="Edufix Logo" className="w-4/12 lg:w-7/12"/>
+                    <img src={logo_transparent} alt="Edufix Logo" className="w-6/12 lg:w-7/12"/>
                 </Link>        
 
                 <div className="flex items-center justify-end text-3xl lg:hidden w-full cursor-pointer" onClick={() => {

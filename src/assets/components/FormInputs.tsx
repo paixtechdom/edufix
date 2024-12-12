@@ -26,7 +26,7 @@ export interface InputFieldInterface {
 export const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, children, isReadonly, func, placeholder, icon }) => {
     return(
         <div id={name} className={`flex flex-col w-full gap-2 ${className} relative`}>
-            <label htmlFor={label} className={`${value !== "" ? "text-tertiary" : "text-zinc-900"} font-bold text- sm`}>
+            <label htmlFor={label} className={`${value !== "" ? "text-primary" : "text-zinc-900"} font-bold text-sm`}>
                 {label}
             </label>
 
@@ -41,7 +41,7 @@ export const InputField:FC<InputFieldInterface> = ({type, label, className, hand
                         value={value}
                         readOnly={isReadonly}
                         placeholder={placeholder}
-                        className={`bg-transparent border-none w-full outline-none py-[12px] px-5 text-black ${func && children !== undefined ? 'cursor-pointer' : ''}`}
+                        className={`bg-white border-none w-full outline-none py-[12px] px-5 text-black ${func && children !== undefined ? 'cursor-pointer' : ''}`}
                     />
 
                     {icon}

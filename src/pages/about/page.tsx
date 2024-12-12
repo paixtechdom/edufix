@@ -1,10 +1,6 @@
-import { Link } from "react-router-dom"
-import { Button } from "../../assets/components/Button"
-import { logo_transparentII } from "../../assets/Constants"
 import { BiBriefcase, BiCheckCircle, BiShield } from "react-icons/bi"
 import { FaHandshake } from "react-icons/fa"
 import { FiTarget } from "react-icons/fi"
-import { ImageText } from "../../assets/components/ImageText"
 import { InfoPoster } from "../../assets/components/InfoPoster"
 import { Header } from "../../assets/components/Header"
 
@@ -44,9 +40,9 @@ export const About = {
 
 const AboutPage = () => {
   return (
-    <main className="w-full center flex-col mt-32">
+    <main className="w-full center flex-col py-[15vh]">
 
-        <section className="w-full center mt-20 lg:mt-0"> 
+        <section className="w-full center"> 
             <div className="w-11/12 lg:w-10/12 flex flex-col gap-8 justify-between">
                     <h1 className="text-4xl font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent w-fit">
                         ABOUT US
@@ -67,7 +63,17 @@ const AboutPage = () => {
             </div>        
         </section>
 
-        <section className="w-11/12 lg:w-10/12 flex flex-col gap-40 mt-32 lg:mt-24">
+        <section className="w-11/12 lg:w-10/12 flex flex-col gap-40 my-32 lg:mt-24">
+
+
+            <div className="bg-primary center min-h-[30vh] rounded-3xl py-9 relative overflow-hidden">
+              <DesignLines />
+              <div className="z-10 text-center center flex-col gap-4 w-11/12">
+                <h3 className="font-bold text-3xl text-zinc-100">OUR GOAL</h3>
+                <p className="text-white">{About.goal}</p>
+              </div>
+            </div>
+
 
             <div className="center w-full flex-col gap-12">
               <Header 
@@ -75,10 +81,10 @@ const AboutPage = () => {
                   <h2 className="font-bold text-4xl w-full lg:w-fit">OUR VALUES</h2>
                 }
               />
-              <div className="grid grid-cols-2 gap-9 lg:flex justify-between lg:gap-3 flex-wrap w-full">
+              <div className="flex flex-col lg:flex-row gap-9 lg:justify-between lg:gap-3 flex-wrap w-full divide-y lg:divide-y-0 divide-sec">
                 {
                   About.values.map((j, i) => (
-                    <div key={i} className="flex flex-col gap-3 w-fu ll">
+                    <div key={i} className="center flex-col gap-3 bg-red-2 00 pt-6 lg:pt-0">
 
                       <div className={`text-4xl ${i %2==0 ? "text-sec" : "text-primary"}`}>
                         {j.icon}
@@ -99,41 +105,7 @@ const AboutPage = () => {
                 <p className="text-white">{About.missison}</p>
               </div>
             </div>
-    
-            <ImageText
-              title="OUR GOAL AT EDUCFIX" 
-              desc={[About.goal]}
-              img={logo_transparentII}
-              btn={
-                <Link to="/">
-                  <Button 
-                    text={"Apply Now"} 
-                    className={"bg-primary text-white uppercase h-12 min-w-[200px] w-fit"}                               
-                  /> 
-                </Link>
-              }
-            />
-            
-        
-            {/* <div className="bg-primary center min-h-[30vh] rounded-3xl py-9  relative overflow-hidden">
-              <>
-                <div className="absolute border-opacity-25 lg:border-opacity-100 z-0 top-6 -left-14 w-64 h-12 bg-transparent border border-sec -rotate-45">
-                </div>
-                <div className="absolute border-opacity-25 lg:border-opacity-100 z-0 bottom-6 -left-14 w-64 h-12 bg-transparent border border-sec rotate-45">
-                </div>
-                <div className="absolute border-opacity-25 lg:border-opacity-100 z-0 bottom-6 -right-14 w-64 h-12 bg-transparent border border-sec -rotate-45">
-                </div>
-                <div className="absolute border-opacity-25 lg:border-opacity-100 z-0 top-6 -right-14 w-64 h-12 bg-transparent border border-sec rotate-45">
-                </div>
-              </>
-            <div className="z-10 text-center center flex-col gap-4 w-11/12">
-              <h3 className="font-bold text-3xl text-zinc-300">OUR VISION</h3>
-              <p className="text-white">{About.vision}</p>
-              </div>
-              </div> */}
-
-            
-            {/* vision */}
+  
 
           
           </section>
