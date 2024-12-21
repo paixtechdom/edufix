@@ -1,8 +1,11 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 import { Button } from "./Button"
+import { setScrollPageTo } from "../store/navigation/navigationSlice"
+import { useDispatch } from "react-redux"
 
 export const InfoPoster:FC<any> = ({text, btn}) => {
+  const dispatch = useDispatch()
   return (
     <section className="w-full center min-h-[40vh] py-9 bg-primary bg-opacity-[0.01] shadow-xl relative overflow-hidden">
       
@@ -13,7 +16,10 @@ export const InfoPoster:FC<any> = ({text, btn}) => {
               btn ?
               btn 
               :
-              <Link to="/become-a-createhive">
+              <Link to="/become-a-createhive"
+              onClick={() => {
+                  dispatch(setScrollPageTo("registrationForm"))
+              }}>
                   <Button 
                       text={"APPLY NOW"}
                       className="border border-sec transition-all duration-1000 hover:scale-90 active:scale-90 min-w-[200px] h-12"

@@ -7,8 +7,23 @@ import { BiDownload } from "react-icons/bi"
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
 import img from "../../assets/images/write-364178_1920.jpg"
 import file from "../../assets/EDUCFIX CREATEHIVE FEES.pdf"
+import { useSelector } from "react-redux"
+import { RootState } from "../../assets/store/AppStore"
+import { useEffect } from "react"
 
 const BecomePage = () => {
+
+  const navigation = useSelector((state: RootState) => state.navigation)
+  const scrollPageTo = navigation.scrollPageTo
+
+  useEffect(() => {
+    if(scrollPageTo !== ""){
+      document.querySelector(`#${scrollPageTo}`)?.scrollIntoView({
+        behavior: "smooth"
+      })
+    }
+  }, [])
+
 
 
   return (

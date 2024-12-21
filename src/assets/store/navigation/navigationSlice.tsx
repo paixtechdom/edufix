@@ -9,7 +9,9 @@ interface NavInterface {
     currentDropDownIndex: number,
     scrolledDown: boolean,
     currentDropDown: string;
-    selectedCourse: string
+    selectedCourse: string,
+    scrollPageTo: string,
+    currentCourse: number
 }
 
 const initialState: NavInterface  = {
@@ -18,7 +20,9 @@ const initialState: NavInterface  = {
     currentDropDownIndex: 0,
     scrolledDown: false,
     currentDropDown: "",
-    selectedCourse: ""
+    selectedCourse: "",
+    scrollPageTo: "",
+    currentCourse: 0
 }
 
  
@@ -45,11 +49,17 @@ const navigationSlice = createSlice({
         setSelectedCourse: (state, action: PayloadAction<string>) => {
             state.selectedCourse = action.payload
         },
+        setScrollPageTo: (state, action: PayloadAction<string>) => {
+            state.scrollPageTo = action.payload
+        },
+        setCurrentCourse: (state, action: PayloadAction<number>) => {
+            state.currentCourse = action.payload
+        }
     }
 })
 
 
-export const { toggleShowNav, setCurrentNav, setCurrentDropDownIndex, toggleScrolledDown, setCurrentDropDown, setSelectedCourse } = navigationSlice.actions
+export const { toggleShowNav, setCurrentNav, setCurrentDropDownIndex, toggleScrolledDown, setCurrentDropDown, setSelectedCourse, setScrollPageTo, setCurrentCourse } = navigationSlice.actions
 
 
 export default navigationSlice.reducer

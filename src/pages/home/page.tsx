@@ -10,6 +10,8 @@ import { FaDollarSign } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import { FAQ } from "./sections/FAQ"
 import { Header } from "../../assets/components/Header"
+import { useDispatch } from "react-redux"
+import { setScrollPageTo } from "../../assets/store/navigation/navigationSlice"
 
 export const Branches = [
     {
@@ -58,6 +60,8 @@ const HomePage = () => {
     useEffect(() => {
         ScrolltoTop()
     }, [])
+
+    const dispatch = useDispatch()
 
     return(
         <main className="center flex-col w-full text-base">
@@ -132,7 +136,10 @@ const HomePage = () => {
                             ))
                         }
                     </div>
-                    <Link to="/programs/createhive">
+                    <Link to="/programs/createhive" 
+                     onClick={() => {
+                        dispatch(setScrollPageTo('courses'))
+                    }}>
                         <Button 
                             text={"View Our Courses"}
                             className="bg-primary text-white h-12 min-w-[240px]  hover:bg-white hover:border border-sec hover:text-black transition-all duration-500"

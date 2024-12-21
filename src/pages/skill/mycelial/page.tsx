@@ -9,7 +9,7 @@ import img from "../../../assets/images/pexels-fauxels-3183197.jpg"
 
 export const mycelial = {
   intro: [
-    <p><strong>BUSINESS EDUbeCATION, called <span className="text-primary">MYCELIAL NETWORK</span> </strong>  is a powerful metaphor for interconnectedness and
+    <p><strong>BUSINESS EDUCATION, called <span className="text-primary">MYCELIAL NETWORK</span> </strong>  is a powerful metaphor for interconnectedness and
     collaboration. It reminds us that everything in nature is connected, and that the
     health of one organism can influence the health of others.
     </p>,

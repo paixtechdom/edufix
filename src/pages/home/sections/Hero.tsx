@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
 import { Button } from "../../../assets/components/Button"
+import { useDispatch } from "react-redux"
+import { setScrollPageTo } from "../../../assets/store/navigation/navigationSlice"
 
 
 
 export const Hero = () => {
+    const dispatch = useDispatch()
+
     return(
         <section className="min-h-screen bg-hero bg-center bg-fixed bg-no-repeat bg-cover h-fit w-full center py-[15vh]"> 
             <div className="lg:mt-0 w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-between gap-20">
@@ -18,7 +22,10 @@ export const Hero = () => {
                     <p className="text-base">
                     Innovation Forge is a comprehensive online education platform offering programs in online skill development, online business education, and advanced business training, designed to empower individuals and businesses to thrive in the digital age. We equip you with the knowledge and skills needed to launch or scale your business and build a successful career.
                     </p>
-                    <Link to="/become-a-createhive">
+                    <Link to="/become-a-createhive" 
+                    onClick={() => {
+                        dispatch(setScrollPageTo("registrationForm"))
+                    }}>
                         <Button 
                             text={"APPLY NOW"}
                             className="bg-primary text-white h-12 w-52 hover:bg-white hover:border border-sec hover:text-black transition-all duration-500"

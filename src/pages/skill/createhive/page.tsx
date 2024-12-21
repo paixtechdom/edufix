@@ -1,13 +1,14 @@
-import { useState } from "react"
+import { useEffect } from "react"
 import { CoursesList } from "../../../assets/Constants"
 import { BiCheck, BiChevronDown, BiChevronRight } from "react-icons/bi"
 import { Button } from "../../../assets/components/Button"
 import { Header } from "../../../assets/components/Header"
 import { InfoPoster } from "../../../assets/components/InfoPoster"
-import { useDispatch } from "react-redux"
-import { setSelectedCourse } from "../../../assets/store/navigation/navigationSlice"
+import { useDispatch, useSelector } from "react-redux"
+import { setCurrentCourse, setSelectedCourse } from "../../../assets/store/navigation/navigationSlice"
 import { Link } from "react-router-dom"
 import { BreadCrumbs } from "../../../assets/components/BreadCrumbs"
+import { RootState } from "../../../assets/store/AppStore"
 
 export const CreateHiveInfo = {
   desc: [
@@ -63,8 +64,18 @@ export const CreateHiveInfo = {
 }
 
 const CreateHivePage = () => {
-  const [ currentCourse, setCurrentCourse ] = useState(0)
   const dispatch = useDispatch()
+  const navigation = useSelector((state: RootState) => state.navigation)
+  const scrollPageTo = navigation.scrollPageTo
+  const currentCourse = navigation.currentCourse
+
+  useEffect(() => {
+    if(scrollPageTo !== ""){
+      document.querySelector(`#${scrollPageTo}`)?.scrollIntoView({
+        behavior: "smooth"
+      })
+    }
+  }, [scrollPageTo])
 
   return (
     <main className="text-base w-full center flex-col gap -20 bg-primary bg-opacity-5 pb-32">
@@ -157,7 +168,7 @@ const CreateHivePage = () => {
 
 
 
-        <div id="courses" className="flex flex-col mt-20">
+        <div id="courses" className="flex flex-col pt-20">
             
           <Header 
             text={
@@ -168,16 +179,16 @@ const CreateHivePage = () => {
           <p className="mt-5">Amidst all the skills available to learn, we will be focusing on the soft skills and streamlining it to a few that we will be providing for the mean time. Here are the skills to train: 
 
           </p>
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-x-6 items-stretch">
             {CoursesList.map((course, i) => (
               
               <div id={`${course.title.replace(" ",'').replace(" ",'').replace(" ",'').replace(" ",'').replace("&",'')}`}
                 key={i} 
                 className={`w-full transition-all duration-500 full 
-                  ${currentCourse == i ? "py-10 col-span-2" : "py-5"} `} 
+                  ${currentCourse == i ? "py-10 lg:py-20 col-span-2" : "py-5"} `} 
                   
                 onClick={() => {
-                setCurrentCourse(i)
+                dispatch(setCurrentCourse(i))
                 dispatch(setSelectedCourse(course.title))
                 document.querySelector(`#${course.title.replace(" ",'').replace(" ",'').replace(" ",'').replace(" ",'').replace("&",'')}`)?.scrollIntoView({
                   behavior: "smooth"
@@ -222,7 +233,7 @@ const CreateHivePage = () => {
                     {
                       currentCourse !== i &&
                       <div className="hidden cursor-pointer rounded-lg lg:center bg-primary text-white h-fit" onClick={() => {
-                        setCurrentCourse(i)
+                        dispatch(setCurrentCourse(i))
                       }}>
                         <BiChevronDown  className="text-6xl cursor-pointer bg-re d-400 z-10"/>
                       </div>
@@ -245,4 +256,6 @@ const CreateHivePage = () => {
   )
 }
 
+// talk to people
+// hear how she's gonna place the stuffs
 export default CreateHivePage

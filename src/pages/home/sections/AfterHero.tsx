@@ -6,6 +6,8 @@ import { Button } from "../../../assets/components/Button"
 import { BiGlobe } from "react-icons/bi"
 import { BsPeople } from "react-icons/bs"
 import { FaStar } from "react-icons/fa6"
+import { useDispatch } from "react-redux"
+import { setScrollPageTo } from "../../../assets/store/navigation/navigationSlice"
 
 
 export const Content = [
@@ -46,6 +48,7 @@ export const Content = [
 
 
 export const AfterHero : React.FC =  () => {
+    const dispatch = useDispatch()
     return(
         <>
             <section className="w-full center py-[15vh] overflow-hidden relative text-base">
@@ -65,7 +68,10 @@ export const AfterHero : React.FC =  () => {
                             ))
                         }
                     </div>
-                    <Link to="/programs/createhive">
+                    <Link to="/programs/createhive" 
+                    onClick={() => {
+                        dispatch(setScrollPageTo('courses'))
+                    }}>
                         <Button 
                             text={"View Our Courses"}
                             className="bg-primary text-white h-12 min-w-[240px] hover:bg-white hover:border border-sec hover:text-black transition-all duration-500"

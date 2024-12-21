@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { RiWhatsappFill } from "react-icons/ri"
 import { CoursesList, logo_transparent, Navigation } from "../Constants"
 import { Branches } from "../../pages/home/page"
+import { useDispatch } from "react-redux"
+import { setCurrentCourse, setScrollPageTo } from "../store/navigation/navigationSlice"
 
 export const ContactInfo = [
     // {
@@ -40,6 +42,7 @@ export const ContactInfo = [
 
 
 const Footer = () => {
+    const dispatch = useDispatch()
     return(
         <footer className="w-full center flex-col bg-primary bg-opacity-5 pt-[10vh] lg:pt-[15vh] border-t border-sec">
             <div className="w-11/12 xl:w-10/12 flex flex-col gap-6 text-gray-900 z-10">
@@ -74,7 +77,12 @@ const Footer = () => {
                         <div className="flex flex-col gap-3 text-sm text-gray-900">
                             {
                                 CoursesList.map((course, i) => (
-                                    <Link key={i} to={`become-a-createhive`}>
+                                    <Link key={i} to={`/programs/createhive`}
+                                    onClick={() => {
+                                        dispatch(setScrollPageTo(course.title.replace(" ",'').replace(" ",'').replace(" ",'').replace(" ",'').replace("&",'')))
+                                        dispatch(setCurrentCourse(i))
+                                    }}
+                                    >
                                         {course.title}
                                     </Link>
                                 ))
