@@ -4,6 +4,7 @@ import { FcPodiumWithAudience } from "react-icons/fc"
 import { BreadCrumbs } from "../../../assets/components/BreadCrumbs"
 import { BiChevronRight } from "react-icons/bi"
 import img from "../../../assets/images/pexels-fauxels-3183197.jpg"
+import { Helmet } from "react-helmet-async"
 
 
 
@@ -46,78 +47,84 @@ export const mycelial = {
 }
 const MycelialPage = () => {
   return (
-    <main className='w-full center flex-col gap-20 lg:gap-30 mb-32'>
-        <div className="w-11/12 lg:w-10/12 center flex-col">
-          <ImageText 
-          id="mycelialhero"
-          title="MYCELIAL NETWORK" 
-          desc={mycelial.intro}
-          img={img}  
-          btn=""
-          
-          />
-          <BreadCrumbs links={["Home", <p className="center gap-3"><span className="font-light text-sm text-black center gap-3">Programs <BiChevronRight className="text-primary"/> </span>  Mycelial Network</p>]} />  
+    <>  
+       <Helmet>
+          <title>Mycelial Network | EDUCFIX</title>
+          <meta name="description" content="Mycelial Network fosters a collaborative environment where students, faculty, industry, and community work together to share knowledge and solve problems"/>
+      </Helmet>
+      <main className='w-full center flex-col gap-20 lg:gap-30 mb-32'>
+          <div className="w-11/12 lg:w-10/12 center flex-col">
+            <ImageText 
+            id="mycelialhero"
+            title="MYCELIAL NETWORK" 
+            desc={mycelial.intro}
+            img={img}  
+            btn=""
+            
+            />
+            <BreadCrumbs links={["Home", <p className="center gap-3"><span className="font-light text-sm text-black center gap-3">Programs <BiChevronRight className="text-primary"/> </span>  Mycelial Network</p>]} />  
 
-          <div className="flex flex-col lg:flex-row justify-between gap-10 w-10/12 ">
-            {
-              mycelial.goals.map((goal, i) => (
-                <div key={i} className="flex items-center flex-col text-center w-full bg-primary bg-opacity-[0.01] p-9 rounded-2xl shadow-lg border border-sec">
-                  <div className="text-8xl text-sec">
-                    {goal.icon}
+            <div className="flex flex-col lg:flex-row justify-between gap-10 w-10/12 ">
+              {
+                mycelial.goals.map((goal, i) => (
+                  <div key={i} className="flex items-center flex-col text-center w-full bg-primary bg-opacity-[0.01] p-9 rounded-2xl shadow-lg border border-sec">
+                    <div className="text-8xl text-sec">
+                      {goal.icon}
+                    </div>
+                    <p>{goal.text}</p>
                   </div>
-                  <p>{goal.text}</p>
-                </div>
-              ))
-            }
-          </div>
-
-
-          <div className="flex flex-col gap-3 mt-32">
-            <h2 className="font-bold text-primary text-2xl w-fit uppercase">
-              Aims and Objectives of MYCELIAL NETWORK
-            </h2>
-            <p className="font-bold">The main aim and objectives of Mycelial Network are:</p>
-
-            <div className="flex flex-col mt-2 gap-3">
-              {
-                mycelial.aims.map((aim, i) => (
-                  <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{aim}</p>
-                  
                 ))
               }
             </div>
-          </div>
-        </div>
 
-        {/* <InfoPoster 
-          text={<p className="flex flex-col gap-2">
-              <span className="text-primary">Niche</span>
 
-              {mycelial.niche}
-          </p>}
-        /> */}
-       
+            <div className="flex flex-col gap-3 mt-32">
+              <h2 className="font-bold text-primary text-2xl w-fit uppercase">
+                Aims and Objectives of MYCELIAL NETWORK
+              </h2>
+              <p className="font-bold">The main aim and objectives of Mycelial Network are:</p>
 
-        <div className="w-11/12 lg:w-10/12 flex-col gap-10"
-        >
-          <div className="flex flex-col gap-3 mb-12 mt-12">
-            <h2 className="font-bold text-primary text-2xl w-fit uppercase">
-              Eligibility
-            </h2>
-            <div className="flex flex-col mt-2 gap-3">
-              {
-                mycelial.eligibility.map((eligibility, i) => (
-                  <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{eligibility}</p>
-                ))
-              }
+              <div className="flex flex-col mt-2 gap-3">
+                {
+                  mycelial.aims.map((aim, i) => (
+                    <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{aim}</p>
+                    
+                  ))
+                }
+              </div>
             </div>
           </div>
 
-        </div>
+          {/* <InfoPoster 
+            text={<p className="flex flex-col gap-2">
+                <span className="text-primary">Niche</span>
+
+                {mycelial.niche}
+            </p>}
+          /> */}
+        
+
+          <div className="w-11/12 lg:w-10/12 flex-col gap-10"
+          >
+            <div className="flex flex-col gap-3 mb-12 mt-12">
+              <h2 className="font-bold text-primary text-2xl w-fit uppercase">
+                Eligibility
+              </h2>
+              <div className="flex flex-col mt-2 gap-3">
+                {
+                  mycelial.eligibility.map((eligibility, i) => (
+                    <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{eligibility}</p>
+                  ))
+                }
+              </div>
+            </div>
+
+          </div>
 
 
 
-    </main>
+      </main>
+    </>
   )
 }
 

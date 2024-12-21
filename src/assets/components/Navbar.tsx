@@ -43,7 +43,7 @@ const Navbar = () => {
     }, [document.URL])
 
     return(
-        <header className={`fixed center w-full left-0 top-0 h-[10vh] md:h-[12vh] z-50 transition-all duration-1000 ${scrolledDown ? "bg-whit e shadow shadow-sec" : "bg-transparent"} `}>
+        <header className={`fixed center w-full left-0 top-0 h-[10vh] md:h-[12vh] z-50 transition-all duration-1000 ${scrolledDown ? "bg-white shadow shadow-sec" : "bg-transparent"} `}>
             <div className="flex items-center justify-end w-11/12 lg:w-10/12">
 
                 <Link to="/" className="w-full lg:w-3/12 flex justify-start outline-none">

@@ -110,7 +110,7 @@ const ContactPage = () => {
     <>  
         <Helmet>
             <title>Contact | EDUCFIX</title>
-            <meta name="description" content="" />
+            <meta name="description" content="Get in touch with us at Educfix" />
         </Helmet>
 
         <main className='w-full min-h-screen center py-[15vh] lg:mt-10'>

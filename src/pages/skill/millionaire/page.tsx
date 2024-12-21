@@ -1,6 +1,7 @@
 import { BiChevronRight } from 'react-icons/bi'
 import { BreadCrumbs } from '../../../assets/components/BreadCrumbs'
 import { Button } from '../../../assets/components/Button'
+import { Helmet } from 'react-helmet-async'
 
 export const millionaire = {
     intro: [
@@ -19,57 +20,64 @@ export const millionaire = {
 
 const MillionairePage = () => {
   return (
-    <main className='w-full center flex-col gap-20 lg:gap-30 my-32'>
-    <div className="w-11/12 lg:w-10/12 center flex-col">
+    <>
+       <Helmet>
+          <title>Millionaire Minds | EDUCFIX</title>
+          <meta name="description" content="This is the last stage in the EDUCFIX skill acquisition stages. It is where there is rigorous training on how to make it with the skill and business education." />
+      </Helmet>
 
-        <div className="text-center center flex-col gap-5 lg:w-10/12">
-            <h1 className="font-bold text-primary text-4xl w-fit">
-                MILLIONAIRE MIND
-            </h1>
+      <main className='w-full center flex-col gap-20 lg:gap-30 my-32'>
+        <div className="w-11/12 lg:w-10/12 center flex-col">
 
-            <p className="text-lg">
-              {millionaire.intro}  
-            </p>
+            <div className="text-center center flex-col gap-5 lg:w-10/12">
+                <h1 className="font-bold text-primary text-4xl w-fit">
+                    MILLIONAIRE MIND
+                </h1>
 
-            <Button 
-                text={"learn more"}
-                className='bg-primary text-white h-12 min-w-[200px] w-fit'
-            />
+                <p className="text-lg">
+                  {millionaire.intro}  
+                </p>
+
+                <Button 
+                    text={"learn more"}
+                    className='bg-primary text-white h-12 min-w-[200px] w-fit'
+                />
+            </div>
+
+            <BreadCrumbs links={["Home", <p className="center gap-3"><span className="font-light text-sm text-black center gap-3">Programs <BiChevronRight className="text-primary"/> </span>  Millionaire Mind</p>]} />  
+
+
+            <div className="flex flex-col gap-3 my-12 mt-32">
+              <h2 className="font-bold text-primary text-2xl w-fit uppercase">
+              Eligibility
+              </h2>
+              <div className="flex flex-col mt-2 gap-3">
+              {
+                  millionaire.eligibility.map((eligibility, i) => (
+                    <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{eligibility}</p>
+                  
+                  ))
+              }
+              </div>
+            </div>
+
+        {/* <InfoPoster 
+          text={<p className="flex flex-col gap-2">
+              <span className="text-primary">Niche</span>
+
+              {mycelial.niche}
+          </p>}
+        /> */}
+      
+
+        
+
         </div>
 
-        <BreadCrumbs links={["Home", <p className="center gap-3"><span className="font-light text-sm text-black center gap-3">Programs <BiChevronRight className="text-primary"/> </span>  Millionaire Mind</p>]} />  
 
 
-        <div className="flex flex-col gap-3 my-12 mt-32">
-          <h2 className="font-bold text-primary text-2xl w-fit uppercase">
-          Eligibility
-          </h2>
-          <div className="flex flex-col mt-2 gap-3">
-          {
-              millionaire.eligibility.map((eligibility, i) => (
-                <p key={i} className='bg-primary bg-opacity-5 p-3 w-full rounded-lg'>{eligibility}</p>
-              
-              ))
-          }
-          </div>
-        </div>
-
-    {/* <InfoPoster 
-      text={<p className="flex flex-col gap-2">
-          <span className="text-primary">Niche</span>
-
-          {mycelial.niche}
-      </p>}
-    /> */}
-   
-
-    
-
-    </div>
-
-
-
-</main>
+      </main>
+    </>
   )
 }
 
