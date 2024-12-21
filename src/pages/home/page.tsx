@@ -5,7 +5,6 @@ import { useEffect } from "react"
 import { ScrolltoTop } from "../../App"
 import { InfoPoster } from "../../assets/components/InfoPoster"
 import { IoBulbSharp } from "react-icons/io5"
-import { BiBook } from "react-icons/bi"
 import { BsPeople } from "react-icons/bs"
 import { FaDollarSign } from "react-icons/fa"
 import { Link } from "react-router-dom"
@@ -33,17 +32,17 @@ export const Branches = [
                 icon: <BsPeople />
             },
             {
-                title: "Millioniare Mind",
+                title: "Millionaire Mind",
                 desc: [
                     'This is the last stage in the EDUCFIX skill acquisition stages. It is where there is rigorous training on how to make it with the skill and business education. '
                 ],
                 icon: <FaDollarSign />
             },
-            {
-                title: "Trainings",
-                desc: ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt praesentium fugiat hic, ullam omnis eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, harum."],
-                icon: <BiBook />
-            }
+            // {
+            //     title: "Trainings",
+            //     desc: ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt praesentium fugiat hic, ullam omnis eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, harum."],
+            //     icon: <BiBook />
+            // }
         ]
     },
     {
@@ -100,10 +99,12 @@ const HomePage = () => {
                                     ))
                                 }
                             </div>
+                            <Link key={i} to={`programs/${j.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()}`}>
                             <Button 
                                 text={"learn more"}
                                 className="border border-sec rounded-full min-w-[180px] w-fit h-10 mt-3 text-sm transition-all duration-1000 hover:bg-primary hover:text-white active:bg-primary active:text-white hover:border-none"
                             />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -131,10 +132,10 @@ const HomePage = () => {
                             ))
                         }
                     </div>
-                    <Link to="/">
+                    <Link to="/programs/createhive">
                         <Button 
                             text={"View Our Courses"}
-                            className="bg-primary text-white h-12 min-w-[240px]"
+                            className="bg-primary text-white h-12 min-w-[240px]  hover:bg-white hover:border border-sec hover:text-black transition-all duration-500"
                             />
                     </Link>
                 </div>
@@ -144,7 +145,7 @@ const HomePage = () => {
 
 
             <InfoPoster 
-              text="experience a new approach and method implored into skill education."
+              text="Experience a new approach and method implored into skill education."
             />
 
             

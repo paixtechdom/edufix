@@ -1,7 +1,12 @@
-import { logo_transparentII } from "../../assets/Constants"
 import { Button } from "../../assets/components/Button"
 import { Registration } from "./Registration"
 import { ImageText } from "../../assets/components/ImageText"
+import { How } from "./How"
+import { InfoPoster } from "../../assets/components/InfoPoster"
+import { BiDownload } from "react-icons/bi"
+import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
+import img from "../../assets/images/write-364178_1920.jpg"
+import file from "../../assets/EDUCFIX CREATEHIVE FEES.pdf"
 
 const BecomePage = () => {
 
@@ -15,23 +20,41 @@ const BecomePage = () => {
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti expedita vel, enim quos laborum id molestiae obcaecati similique nostrum ullam neque nemo sed magnam porro laboriosam sunt voluptate provident! Aut!",
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti expedita vel, enim quos laborum id molestiae obcaecati similique nostrum ullam neque nemo sed magnam porro laboriosam sunt voluptate provident! Aut!",
           ]}
-          img={logo_transparentII}
+          img={img}
           btn={
-            <Button 
-              text={"register now"}
-              className="bg-white border border-sec w-fit min-w-[200px] h-122"
-            />
+            <div onClick={() => {
+              document.querySelector('#registrationForm')?.scrollIntoView({
+                behavior: "smooth"
+              })
+            }}>
+                <Button 
+                  text={"register now"}
+                  className="bg-white border border-sec w-fit min-w-[200px] h-122"
+                />
+            </div>
 
           }
         />
+        
+        <BreadCrumbs links={["Home", "Become a Createhive"]} />     
 
-        <p>About Create hive</p>
-        <p>How to be a student</p>
-        <p>Fee structure</p>
+        <How />
 
-
-
+        <InfoPoster 
+          text={'Download our fee structure'}
+          btn={
+            <a href={file} target="_blank">
+            <Button 
+                text={"Download"}
+                icon={<BiDownload />}
+                className="border border-sec transition-all duration-1000 hover:scale-90 active:scale-90 min-w-[200px] h-12 center gap-2 text-sm"
+            />
+            </a>
+          }
+          />
+          
         <Registration />
+
       </div>
 
     </main>

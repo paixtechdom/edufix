@@ -1,13 +1,15 @@
 import { CgCommunity } from "react-icons/cg"
 import { ImageText } from "../../../assets/components/ImageText"
-import { logo_transparentII } from "../../../assets/Constants"
 import { FcPodiumWithAudience } from "react-icons/fc"
+import { BreadCrumbs } from "../../../assets/components/BreadCrumbs"
+import { BiChevronRight } from "react-icons/bi"
+import img from "../../../assets/images/pexels-fauxels-3183197.jpg"
 
 
 
 export const mycelial = {
   intro: [
-    <p><strong>BUSINESS EDUCATION, called <span className="text-primary">MYCELIAL NETWORK</span> </strong>  is a powerful metaphor for interconnectedness and
+    <p><strong>BUSINESS EDUbeCATION, called <span className="text-primary">MYCELIAL NETWORK</span> </strong>  is a powerful metaphor for interconnectedness and
     collaboration. It reminds us that everything in nature is connected, and that the
     health of one organism can influence the health of others.
     </p>,
@@ -50,10 +52,11 @@ const MycelialPage = () => {
           id="mycelialhero"
           title="MYCELIAL NETWORK" 
           desc={mycelial.intro}
-          img={logo_transparentII}  
+          img={img}  
           btn=""
           
           />
+          <BreadCrumbs links={["Home", <p className="center gap-3"><span className="font-light text-sm text-black center gap-3">Programs <BiChevronRight className="text-primary"/> </span>  Mycelial Network</p>]} />  
 
           <div className="flex flex-col lg:flex-row justify-between gap-10 w-10/12 ">
             {
@@ -70,7 +73,7 @@ const MycelialPage = () => {
 
 
           <div className="flex flex-col gap-3 mt-32">
-            <h2 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-2xl w-fit uppercase">
+            <h2 className="font-bold text-primary text-2xl w-fit uppercase">
               Aims and Objectives of MYCELIAL NETWORK
             </h2>
             <p className="font-bold">The main aim and objectives of Mycelial Network are:</p>
@@ -98,7 +101,7 @@ const MycelialPage = () => {
         <div className="w-11/12 lg:w-10/12 flex-col gap-10"
         >
           <div className="flex flex-col gap-3 mb-12 mt-12">
-            <h2 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-2xl w-fit uppercase">
+            <h2 className="font-bold text-primary text-2xl w-fit uppercase">
               Eligibility
             </h2>
             <div className="flex flex-col mt-2 gap-3">

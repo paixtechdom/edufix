@@ -9,7 +9,7 @@ export const FAQ = () => {
     return(
         <section id="FAQ" className="center flex-col py-[9ch] w-full">   
             <div className="flex flex-col lg:flex-row w-11/12 lg:w-10/12 overflow-hidden gap-10">
-                <h3 className="text-3xl mb-[7vh] lg:w-4/12 font-bold text-primary">COMMON QUESTIONS STUDENTS ARE ASKING US</h3>
+                <h2 className="text-3xl mb-[7vh] lg:w-4/12 font-bold text-primary">COMMON QUESTIONS STUDENTS ARE ASKING US</h2>
            
 
             

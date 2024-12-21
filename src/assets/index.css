@@ -1,5 +1,5 @@
 
-@import url('https://fonts.cdnfonts.com/css/helvetica-now-mt-micro');
+@import url('https://fonts.cdnfonts.com/css/helvetica-now-mt-micro?styles=153652, 153653');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,9 @@
 
 *{
     font-family: 'Helvetica Now MT Text', sans-serif;
+}
+h1, h2{
+    font-family: 'Helvetica Now MT Disp', 'Helvetica Now MT Text', sans-serif;
 }
 
 .center{

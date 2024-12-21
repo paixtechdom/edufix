@@ -1,3 +1,5 @@
+import { BiChevronRight } from 'react-icons/bi'
+import { BreadCrumbs } from '../../../assets/components/BreadCrumbs'
 import { Button } from '../../../assets/components/Button'
 
 export const millionaire = {
@@ -21,7 +23,7 @@ const MillionairePage = () => {
     <div className="w-11/12 lg:w-10/12 center flex-col">
 
         <div className="text-center center flex-col gap-5 lg:w-10/12">
-            <h1 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-4xl w-fit">
+            <h1 className="font-bold text-primary text-4xl w-fit">
                 MILLIONAIRE MIND
             </h1>
 
@@ -30,13 +32,16 @@ const MillionairePage = () => {
             </p>
 
             <Button 
-                text={"APPLY NOW"}
+                text={"learn more"}
                 className='bg-primary text-white h-12 min-w-[200px] w-fit'
             />
         </div>
 
+        <BreadCrumbs links={["Home", <p className="center gap-3"><span className="font-light text-sm text-black center gap-3">Programs <BiChevronRight className="text-primary"/> </span>  Millionaire Mind</p>]} />  
+
+
         <div className="flex flex-col gap-3 my-12 mt-32">
-          <h2 className="font-bold bg-clip-text bg-gradient-to-r from-primary to-sec text-transparent text-2xl w-fit uppercase">
+          <h2 className="font-bold text-primary text-2xl w-fit uppercase">
           Eligibility
           </h2>
           <div className="flex flex-col mt-2 gap-3">

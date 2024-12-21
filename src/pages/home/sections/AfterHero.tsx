@@ -1,5 +1,4 @@
 import { FaHandshake } from "react-icons/fa"
-import { GoVerified } from "react-icons/go"
 import { RiMoneyDollarCircleLine } from "react-icons/ri"
 import { TiTime } from "react-icons/ti"
 import { Link } from "react-router-dom"
@@ -15,12 +14,6 @@ export const Content = [
         icon: <RiMoneyDollarCircleLine />,
         type: "",
         desc: "As a tuition-free, online university, there is no cost for instruction, books or campus fees."
-    },
-    {
-        title: "Benin Accredited",
-        icon: <GoVerified />,
-        type: "after",
-        desc: "Educfix is recognised by the BAU as an accredited online university."
     },
     {
         title: "Flexible",
@@ -57,12 +50,12 @@ export const AfterHero : React.FC =  () => {
         <>
             <section className="w-full center py-[15vh] overflow-hidden relative text-base">
                 <div className="w-11/12 lg:w-10/12 center flex-col gap-10">
-                    <div className="w-full flex flex-col lg:flex-row justify-between gap-10">
+                    <div className="w-full flex flex-col lg:flex-row justify-center gap-10">
 
                         {
                             Content.map((j, i) => (
                                 j.type == "after" || j.type == "" ?
-                                <div key={i} className="flex flex-col gap-3 items-center w-full">
+                                <div key={i} className="flex flex-col gap-3 items-center w-full lg:w-4/12">
                                     <div className="text-sec text-5xl">
                                         {j.icon}
                                     </div>
@@ -72,10 +65,10 @@ export const AfterHero : React.FC =  () => {
                             ))
                         }
                     </div>
-                    <Link to="/">
+                    <Link to="/programs/createhive">
                         <Button 
                             text={"View Our Courses"}
-                            className="bg-primary text-white h-12 min-w-[240px]"
+                            className="bg-primary text-white h-12 min-w-[240px] hover:bg-white hover:border border-sec hover:text-black transition-all duration-500"
                             />
                     </Link>
                 </div>

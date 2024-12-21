@@ -12,10 +12,6 @@ export const Navigation = [
     link: ''
   },
   {
-      title: 'About',
-      link: 'About'
-  },
-  {
       title: 'Innovation Forge Programs',
       link: 'programs',
       sublinks: [
@@ -28,20 +24,24 @@ export const Navigation = [
               link: 'mycelial-network'
           },
           {
-              title: 'Millioniare Mind',
+              title: 'Millionaire Mind',
               link: 'millionaire-mind'
           },
         //   {
         //       title: 'Trainings',
         //       link: ''
         //   },
-      ]
-  },
-  {
-      title: 'Become a Createhive',
-      link: 'become-a-createhive',
-  },
-  {
+    ]
+},
+{
+    title: 'Become a Createhive',
+    link: 'become-a-createhive',
+},
+{
+    title: 'About',
+    link: 'About'
+},
+{
       title: 'Contact',
       link: 'Contact'
   }

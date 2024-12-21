@@ -8,6 +8,7 @@ import { BsExclamationCircleFill } from "react-icons/bs"
 import { BiLoaderAlt } from "react-icons/bi"
 import { Helmet } from "react-helmet-async"
 import { Header } from "../../assets/components/Header"
+import { ContactInfo } from "../../assets/components/Footer"
 
 
 
@@ -112,18 +113,37 @@ const ContactPage = () => {
             <meta name="description" content="" />
         </Helmet>
 
-        <main className='w-full min-h-screen center py-[15vh]'>
-            <div className="w-11/12 lg:w-10/12 xl:w-9/12 center flex-col gap-9 text-white">
-            <div className="w-full mb -9">
+        <main className='w-full min-h-screen center py-[15vh] lg:mt-10'>
+            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row gap-9">
+                <div className="flex flex-col w-full lg:w-5/12 h-full mb -9">
 
-                <Header 
-                    text={
-                        <h1 className="text-4xl">CONTACT US</h1>
-                    }
-                />
-            </div>
+                    <Header 
+                        text={
+                            <h1 className="text-4xl">CONTACT US</h1>
+                        }
+                    />
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full md:w-9/12 lg:w-9/12 xl:w-8/12 bg-primary bg-opacity-5 px-3 md:px-9 p-9 rounded-2xl py-[10vh] shadow-xl">
+                    <div className="flex flex-col gap-3 mt-5">
+                        {
+                            ContactInfo.map((info, i) => (
+                                <div key={i} className="flex flex-col gap-2 w-full">
+
+                                    <div key={i} className="flex items-center gap-2">
+                                        {info.icon}
+                                        <p className="text-primary font-bold">
+                                            {info.text}
+                                        </p>
+
+                                    </div>
+                                    <a href={info.link} target="_blank" className="pl-6">{info.contact}</a>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                </div>
+
+                <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full lg:w-7/12 bg-pri mary bg-opacity-5 px-3 md:px-9 p-9 rounded-2xl lg:py-[10vh] border border-sec border-opacity-30">
                     <h2 className="text-2xl font-bold text-primary mb-2 uppercase">Send us a message</h2>
                            
 
